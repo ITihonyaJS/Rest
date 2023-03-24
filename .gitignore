@@ -1,17 +1,17 @@
 # Don't check auto-generated stuff into git
-coverage
+/coverage
 junit.xml
-build
-node_modules
+/build
+/node_modules
 stats.json
-.pnp
+/.pnp
 .pnp.js
 
 # we prefer yarn
 package-lock.json
 
 # misc
-.idea
+/.idea
 .vscode
 .DS_Store
 npm-debug.log*
