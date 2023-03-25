@@ -61,3 +61,4 @@ app.get('*', (req, res) => {
 
 //запускаю сервер с параметрами(порт и cb(показывем процесс ожидания ...))
 app.listen(3000, () => console.log('Server has been started on port 3000...'))
+console.log('Hello')
