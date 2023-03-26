@@ -49,14 +49,14 @@ app.put('/api/contacts/:id', (req, res) => {
 //____________//
 //Все эти запросы должны находится внизу,чтобы запускались последними
 //_____________//
-// //делаем папку client статической.Так как index.html запускает файл frontend.js по относительному пути...
+// //делаем папку docs статической.Так как index.html запускает файл frontend.js по относительному пути...
 // а index.html мы запускает из файла backend, то index.html может просто не найти файл frontend.js
-app.use(express.static(path.resolve(__dirname, 'client')))
+app.use(express.static(path.resolve(__dirname, 'docs')))
 
 //когда я буду выполнять метод get под любым '*' роутом, тогда выполняем следующую функцию
 // функция принимает req,res и возвращает результат html файла...с помощью функции sendFile
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'client', 'index.html'))
+  res.sendFile(path.resolve(__dirname, 'docs', 'index.html'))
 })
 
 //запускаю сервер с параметрами(порт и cb(показывем процесс ожидания ...))
